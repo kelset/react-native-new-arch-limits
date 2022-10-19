@@ -8,7 +8,7 @@ A few things to notice:
 
 - technically, to turn on the new arch you have just one switch, [see here](https://reactnative.dev/docs/next/the-new-architecture/use-app-template#enable-the-new-architecture). This means both TM and Fabric ON at the same time.
   - there are "less known" ways to only switch ON one or the other. So we'll test all the options. (also: I'm not sure if this will work on >=71)
-- At the end, when everything else is tested, I'll also try to switch on ConcurrentReact and see what goes kaboom.
+- ~At the end, when everything else is tested, I'll also try to switch on ConcurrentReact and see what goes kaboom.~ by default, when turning ON the new arch, concurrent is ON too - [read more](https://reactnative.dev/docs/next/react-18-and-react-native#react-18-enabled-by-default).
 - I picked the libs pretty much on instinct, using [directory](https://reactnative.directory/) as a catalogue.
 - I'm stickying with Hermes only for now just for time-related reasons
 
