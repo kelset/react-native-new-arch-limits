@@ -14,7 +14,7 @@ A few things to notice:
 
 As base test, I'll:
 
-- try to switch on new arch 🟡
+- try to switch on new arch ✅
 - try to switch on TM only 🟡
 - try to switch on Fabric only 🟡
 
@@ -30,10 +30,9 @@ Then I'll move to the meat of this experiment: the idea is that I'll add all the
 
 ## TODO
 
-- add "status code" to show which state the thing is in (old/new arch, concurrent on/off) (hats off to [@tido64](https://github.com/tido64) for [this](https://github.com/microsoft/react-native-test-app/blob/trunk/example/App.js#L159-L169))
-- do basic tests
-- add libraries and sample code one by one, in old arch
-- do the tests (new arch on first)
-- get the app in shape for turning on in new arch proper
-- try enabling concurrent react
-- summarize the whole thing into some learnings
+✅ add "status code" to show which state the thing is in (old/new arch, concurrent on/off) (hats off to [@tido64](https://github.com/tido64) for [this](https://github.com/microsoft/react-native-test-app/blob/trunk/example/App.js#L159-L169))
+🟡 do basic tests
+🟡 add libraries and sample code one by one, in old arch
+🟡 do the tests (new arch on first)
+🟡 get the app in shape for turning on in new arch proper
+🟡 summarize the whole thing into some learnings
