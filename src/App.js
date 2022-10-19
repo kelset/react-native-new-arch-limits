@@ -47,8 +47,8 @@ const App: () => Node = ({concurrentRoot}) => {
         style={styles.mainContainer}>
         <Text style={styles.textStatus}>
           status: {getReactNativeVersion()} -{' '}
-          {isFabric ? 'Fabric' : 'No Fabric'} -{' '}
-          {isFabric && concurrentRoot ? 'Concurrent' : 'No Concurrent'}
+          {isFabric ? 'Fabric ON' : 'Fabric OFF'} -{' '}
+          {isFabric && concurrentRoot ? 'Concurrent ON' : 'Concurrent OFF'}
         </Text>
 
         <Text style={styles.textTitle}>Hello world</Text>
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: '#EEE',
+    paddingHorizontal: 5,
   },
   textTitle: {
     marginTop: 20,
