@@ -1,3 +1,4 @@
+/* eslint-disable dot-notation */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -5,7 +6,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -15,13 +16,41 @@ import {
   Text,
 } from 'react-native';
 
-const App: () => Node = () => {
+import {version as coreVersion} from 'react-native/Libraries/Core/ReactNativeVersion';
+
+function getReactNativeVersion() {
+  const version = `${coreVersion.major}.${coreVersion.minor}.${coreVersion.patch}`;
+  return coreVersion.prerelease
+    ? version + `-${coreVersion.prerelease}`
+    : version;
+}
+
+const App: () => Node = ({concurrentRoot}) => {
+  const [isFabric, setFabric] = useState(false);
+  const onLayout = useCallback(
+    ev => {
+      setFabric(
+        Boolean(
+          ev.currentTarget['_internalInstanceHandle']?.stateNode?.canonical,
+        ),
+      );
+    },
+    [setFabric],
+  );
+
   return (
     <SafeAreaView style={styles.mainContainer}>
       <StatusBar />
       <ScrollView
+        onLayout={onLayout}
         contentInsetAdjustmentBehavior="automatic"
         style={styles.mainContainer}>
+        <Text style={styles.textStatus}>
+          status: {getReactNativeVersion()} -{' '}
+          {isFabric ? 'Fabric' : 'No Fabric'} -{' '}
+          {isFabric && concurrentRoot ? 'Concurrent' : 'No Concurrent'}
+        </Text>
+
         <Text style={styles.textTitle}>Hello world</Text>
         <Text style={styles.textDescription}>Just doing some tests</Text>
         <Text style={styles.textTitle}>Hello world</Text>
@@ -47,6 +76,11 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
+  },
+  textStatus: {
+    fontSize: 18,
+    fontWeight: '400',
+    textAlign: 'center',
   },
 });
 
