@@ -13,6 +13,7 @@
     "@react-native-community/slider": "^4.3.2",
     "react": "18.1.0",
     "react-native": "0.70.4",
+    "react-native-bouncy-checkbox": "^3.0.5",
     "react-native-get-random-values": "^1.8.0",
     "react-native-webview": "^11.23.1"
   },

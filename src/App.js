@@ -21,6 +21,7 @@ import {version as coreVersion} from 'react-native/Libraries/Core/ReactNativeVer
 import SliderComponent from './SliderComponent';
 import WebViewComponent from './WebViewComponent';
 import CryptoNumberComponent from './CryptoNumberComponent';
+import BouncyCheckboxComponent from './BouncyCheckboxComponent';
 
 function getReactNativeVersion() {
   const version = `${coreVersion.major}.${coreVersion.minor}.${coreVersion.patch}`;
@@ -77,6 +78,9 @@ const App: () => Node = ({concurrentRoot}) => {
           a non-visual lib without "official support" for the new arch
         </Text>
         <CryptoNumberComponent />
+        <Text style={styles.textTitle}>BouncyCheckbox Component</Text>
+        <Text style={styles.textDescription}>a js-only lib</Text>
+        <BouncyCheckboxComponent />
       </ScrollView>
     </SafeAreaView>
   );
