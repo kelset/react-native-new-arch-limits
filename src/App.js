@@ -25,6 +25,10 @@ function getReactNativeVersion() {
     : version;
 }
 
+function isTMActive() {
+  return global.__turboModuleProxy != null;
+}
+
 const App: () => Node = ({concurrentRoot}) => {
   const [isFabric, setFabric] = useState(false);
   const onLayout = useCallback(
@@ -38,6 +42,8 @@ const App: () => Node = ({concurrentRoot}) => {
     [setFabric],
   );
 
+  const [isTM] = useState(isTMActive());
+
   return (
     <SafeAreaView style={styles.mainContainer}>
       <StatusBar />
@@ -46,7 +52,7 @@ const App: () => Node = ({concurrentRoot}) => {
         contentInsetAdjustmentBehavior="automatic"
         style={styles.mainContainer}>
         <Text style={styles.textStatus}>
-          status: {getReactNativeVersion()} -{' '}
+          status: {getReactNativeVersion()} - {isTM ? 'TM ON' : 'TM OFF'} -{' '}
           {isFabric ? 'Fabric ON' : 'Fabric OFF'} -{' '}
           {isFabric && concurrentRoot ? 'Concurrent ON' : 'Concurrent OFF'}
         </Text>
