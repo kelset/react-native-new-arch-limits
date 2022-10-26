@@ -7,9 +7,9 @@ Just a quick test app to validate a few doubts I have been having - basically, I
 A few things to notice:
 
 - technically, to turn on the new arch you have just one switch, [see here](https://reactnative.dev/docs/next/the-new-architecture/use-app-template#enable-the-new-architecture). This means both TM and Fabric ON at the same time.
-  - there are "less known" ways to only switch ON one or the other. So we'll test all the options. (also: I'm not sure if this will work on >=71)
+  - there should be ways to only switch ON one or the other.I'll test all the options I can find. (also: I'm not sure if this will work on >=71)
     - TM on Android: ~based on [this guide](https://reactnative.dev/docs/new-architecture-app-modules-android#6-enable-the-useturbomodules-flag-in-your-application-oncreate), changing [this line](https://github.com/kelset/react-native-new-arch-limits/blob/main/android/app/src/main/java/com/testnewarchmatrix/MainApplication.java#L56) should do the trick~ nvm that, it looks like the easiest way of doing that is actually to switch on new arch as expected, via `gradle.properties`, and manually switch off [Fabric](https://github.com/kelset/react-native-new-arch-limits/blob/main/android/app/src/main/java/com/testnewarchmatrix/MainActivity.java#L37) and [Concurrent](https://github.com/kelset/react-native-new-arch-limits/blob/main/android/app/src/main/java/com/testnewarchmatrix/MainActivity.java#L45). Looks weird, but seems to be working.
-    - TM on iOS: based on [this guide](https://reactnative.dev/docs/new-architecture-app-modules-ios#3-enable-turbo-native-module-system), adding `RCTEnableTurboModule(YES);` on [this line](https://github.com/kelset/react-native-new-arch-limits/blob/main/ios/TestNewArchMatrix/AppDelegate.mm#L34) **AND** removing this [if statement](https://github.com/kelset/react-native-new-arch-limits/blob/main/ios/TestNewArchMatrix/AppDelegate.mm#L94)...should do the trick
+    - TM on iOS: ~based on [this guide](https://reactnative.dev/docs/new-architecture-app-modules-ios#3-enable-turbo-native-module-system), adding `RCTEnableTurboModule(YES);` on [this line](https://github.com/kelset/react-native-new-arch-limits/blob/main/ios/TestNewArchMatrix/AppDelegate.mm#L34) **AND** removing this [if statement](https://github.com/kelset/react-native-new-arch-limits/blob/main/ios/TestNewArchMatrix/AppDelegate.mm#L94)...should do the trick~ I can't seem to figure out a way to make it happen.
 - ~At the end, when everything else is tested, I'll also try to switch on ConcurrentReact and see what goes kaboom.~ by default, when turning ON the new arch, concurrent is ON too - [read more](https://reactnative.dev/docs/next/react-18-and-react-native#react-18-enabled-by-default).
 - I picked the libs pretty much on instinct, using [directory](https://reactnative.directory/) as a catalogue.
 - I'm sticking with Hermes only for now just for time-related reasons
@@ -17,7 +17,7 @@ A few things to notice:
 As base test, I'll:
 
 - try to switch on new arch ✅
-- try to switch on TM only 🟡
+- try to switch on TM only (android)✅ (ios)❌
 - try to switch on Fabric only ❌
   - this is not viable, because Fabric is a TurboModule (basically) so it would go kaboom without TM enabled
 
@@ -30,6 +30,7 @@ Then I'll move to the meat of this experiment: the idea is that I'll add all the
 | a non-visual lib with "official support" for new arch        | couldn't find any                                                                          | 🟡                    | 🟡       | 🟡         |
 | a non-visual lib without "official support" for the new arch | [react-native-get-random-values](https://github.com/LinusU/react-native-get-random-values) | 🟡                    | 🟡       | 🟡         |
 | a js-only lib                                                | [react-native-bouncy-checkbox](https://github.com/WrathChaos/react-native-bouncy-checkbox) | 🟡                    | 🟡       | 🟡         |
+| a new-arch only lib                                          | [react-native-gradient](https://github.com/FyndX/react-native-gradient)                    | 🟡                    | 🟡       | 🟡         |
 
 ## TODO
 
