@@ -1,6 +1,6 @@
 # Testing the new architecture's limits
 
-Just a quick test app to validate a few doubts I have been having - basically, I'm starting with a fresh new RN app on latest stable (0.70.3) and throwing a bunch of libs at it to see what works and what doesn't when enabling the new architecture.
+Just a quick test app to validate a few doubts I have been having - basically, I'm starting with a fresh new RN app on latest stable (0.70.4) and throwing a bunch of libs at it to see what works and what doesn't when enabling the new architecture.
 
 ## Tests matrix
 
@@ -34,9 +34,9 @@ Then I'll move to the meat of this experiment: the idea is that I'll add all the
 
 ## TODO
 
-✅ add "status code" to show which state the thing is in (old/new arch, concurrent on/off) (hats off to [@tido64](https://github.com/tido64) for [this](https://github.com/microsoft/react-native-test-app/blob/trunk/example/App.js#L159-L169))
-🟡 do basic tests
-🟡 add libraries and sample code one by one, in old arch
-🟡 do the tests (new arch on first)
-🟡 get the app in shape for turning on in new arch proper
-🟡 summarize the whole thing into some learnings
+- ✅ add "status code" to show which state the thing is in (old/new arch, concurrent on/off) (hats off to [@tido64](https://github.com/tido64) for [this](https://github.com/microsoft/react-native-test-app/blob/trunk/example/App.js#L159-L169))
+- ✅ do basic tests
+- 🟡 add libraries and sample code one by one, in old arch
+- 🟡 do the tests (new arch on first)
+- 🟡 get the app in shape for turning on in new arch proper
+- 🟡 summarize the whole thing into some learnings
