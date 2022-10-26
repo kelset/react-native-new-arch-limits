@@ -52,7 +52,8 @@ const App: () => Node = ({concurrentRoot}) => {
         contentInsetAdjustmentBehavior="automatic"
         style={styles.mainContainer}>
         <Text style={styles.textStatus}>
-          status: {getReactNativeVersion()} - {isTM ? 'TM ON' : 'TM OFF'} -{' '}
+          version: {getReactNativeVersion()}
+          {'\n'} {isTM ? 'TM ON' : 'TM OFF'} -{' '}
           {isFabric ? 'Fabric ON' : 'Fabric OFF'} -{' '}
           {isFabric && concurrentRoot ? 'Concurrent ON' : 'Concurrent OFF'}
         </Text>
