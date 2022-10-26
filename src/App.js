@@ -20,6 +20,7 @@ import {version as coreVersion} from 'react-native/Libraries/Core/ReactNativeVer
 
 import SliderComponent from './SliderComponent';
 import WebViewComponent from './WebViewComponent';
+import CryptoNumberComponent from './CryptoNumberComponent';
 
 function getReactNativeVersion() {
   const version = `${coreVersion.major}.${coreVersion.minor}.${coreVersion.patch}`;
@@ -71,8 +72,11 @@ const App: () => Node = ({concurrentRoot}) => {
           a visual lib without "official support" for new arch
         </Text>
         <WebViewComponent />
-        <Text style={styles.textTitle}>Hello world</Text>
-        <Text style={styles.textDescription}>Just doing some tests</Text>
+        <Text style={styles.textTitle}>CryptoNumber Component</Text>
+        <Text style={styles.textDescription}>
+          a non-visual lib without "official support" for the new arch
+        </Text>
+        <CryptoNumberComponent />
       </ScrollView>
     </SafeAreaView>
   );
