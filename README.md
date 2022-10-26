@@ -16,9 +16,9 @@ A few things to notice:
 
 As base test, I'll:
 
-- try to switch on new arch ✅
-- try to switch on TM only (android)✅ (ios)❌
-- try to switch on Fabric only ❌
+- try to switch on new arch: ✅
+- try to switch on TM only: (android)✅ (ios)❌
+- try to switch on Fabric only: ❌
   - this is not viable, because Fabric is a TurboModule (basically) so it would go kaboom without TM enabled
 
 Then I'll move to the meat of this experiment: the idea is that I'll add all these libs into the code, and see what happens.
