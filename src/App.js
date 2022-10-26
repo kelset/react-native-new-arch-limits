@@ -19,6 +19,7 @@ import {
 import {version as coreVersion} from 'react-native/Libraries/Core/ReactNativeVersion';
 
 import SliderComponent from './SliderComponent';
+import WebViewComponent from './WebViewComponent';
 
 function getReactNativeVersion() {
   const version = `${coreVersion.major}.${coreVersion.minor}.${coreVersion.patch}`;
@@ -65,8 +66,11 @@ const App: () => Node = ({concurrentRoot}) => {
           a visual lib with "official support" for new arch
         </Text>
         <SliderComponent />
-        <Text style={styles.textTitle}>Hello world</Text>
-        <Text style={styles.textDescription}>Just doing some tests</Text>
+        <Text style={styles.textTitle}>WebView component</Text>
+        <Text style={styles.textDescription}>
+          a visual lib without "official support" for new arch
+        </Text>
+        <WebViewComponent />
         <Text style={styles.textTitle}>Hello world</Text>
         <Text style={styles.textDescription}>Just doing some tests</Text>
       </ScrollView>
