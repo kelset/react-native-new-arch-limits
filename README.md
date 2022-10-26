@@ -23,13 +23,13 @@ As base test, I'll:
 
 Then I'll move to the meat of this experiment: the idea is that I'll add all these libs into the code, and see what happens.
 
-| What                                                         | which lib                                                                                  | old arch _(baseline)_ | new arch | only TM on | only Fabric on |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | --------------------- | -------- | ---------- | -------------- |
-| a visual lib with "official support" for new arch            | [react-native-slider](https://github.com/callstack/react-native-slider)                    | 🟡                    | 🟡       | 🟡         | 🟡             |
-| a visual lib without "official support" for new arch         | [react-native-webview](https://github.com/react-native-webview/react-native-webview)       | 🟡                    | 🟡       | 🟡         | 🟡             |
-| a non-visual lib with "official support" for new arch        | couldn't find any                                                                          | 🟡                    | 🟡       | 🟡         | 🟡             |
-| a non-visual lib without "official support" for the new arch | [react-native-get-random-values](https://github.com/LinusU/react-native-get-random-values) | 🟡                    | 🟡       | 🟡         | 🟡             |
-| a js-only lib                                                | [react-native-bouncy-checkbox](https://github.com/WrathChaos/react-native-bouncy-checkbox) | 🟡                    | 🟡       | 🟡         | 🟡             |
+| What                                                         | which lib                                                                                  | old arch _(baseline)_ | new arch | only TM on |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | --------------------- | -------- | ---------- |
+| a visual lib with "official support" for new arch            | [react-native-slider](https://github.com/callstack/react-native-slider)                    | 🟡                    | 🟡       | 🟡         |
+| a visual lib without "official support" for new arch         | [react-native-webview](https://github.com/react-native-webview/react-native-webview)       | 🟡                    | 🟡       | 🟡         |
+| a non-visual lib with "official support" for new arch        | couldn't find any                                                                          | 🟡                    | 🟡       | 🟡         |
+| a non-visual lib without "official support" for the new arch | [react-native-get-random-values](https://github.com/LinusU/react-native-get-random-values) | 🟡                    | 🟡       | 🟡         |
+| a js-only lib                                                | [react-native-bouncy-checkbox](https://github.com/WrathChaos/react-native-bouncy-checkbox) | 🟡                    | 🟡       | 🟡         |
 
 ## TODO
 
