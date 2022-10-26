@@ -18,6 +18,8 @@ import {
 
 import {version as coreVersion} from 'react-native/Libraries/Core/ReactNativeVersion';
 
+import SliderComponent from './SliderComponent';
+
 function getReactNativeVersion() {
   const version = `${coreVersion.major}.${coreVersion.minor}.${coreVersion.patch}`;
   return coreVersion.prerelease
@@ -58,8 +60,11 @@ const App: () => Node = ({concurrentRoot}) => {
           {isFabric && concurrentRoot ? 'Concurrent ON' : 'Concurrent OFF'}
         </Text>
 
-        <Text style={styles.textTitle}>Hello world</Text>
-        <Text style={styles.textDescription}>Just doing some tests</Text>
+        <Text style={styles.textTitle}>Slider component</Text>
+        <Text style={styles.textDescription}>
+          a visual lib with "official support" for new arch
+        </Text>
+        <SliderComponent />
         <Text style={styles.textTitle}>Hello world</Text>
         <Text style={styles.textDescription}>Just doing some tests</Text>
         <Text style={styles.textTitle}>Hello world</Text>
