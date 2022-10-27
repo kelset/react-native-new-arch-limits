@@ -84,7 +84,7 @@ const App: () => Node = ({concurrentRoot}) => {
         <BouncyCheckboxComponent />
         <Text style={styles.textTitle}>NewArchGradient Component</Text>
         <Text style={styles.textDescription}>a new-arch only lib</Text>
-        <NewArchGradientComponent />
+        {/* <NewArchGradientComponent /> */}
       </ScrollView>
     </SafeAreaView>
   );
