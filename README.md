@@ -30,7 +30,7 @@ Then I'll move to the meat of this experiment: the idea is that I'll add all the
 | a non-visual lib with "official support" for new arch                                                                       | couldn't find any                                                                          | 🤷‍♂️                    | 🤷‍♂️       | 🤷‍♂️         |
 | a non-visual lib without "official support" for the new arch                                                                | [react-native-get-random-values](https://github.com/LinusU/react-native-get-random-values) | ✅                    | ✅       | 🟡         |
 | a js-only lib                                                                                                               | [react-native-bouncy-checkbox](https://github.com/WrathChaos/react-native-bouncy-checkbox) | ✅                    | ✅       | 🟡         |
-| a new-arch only lib                                                                                                         | [react-native-gradient](https://github.com/FyndX/react-native-gradient)                    | ❌ (as expected)      | ✅ (ios) ❌ (unexpected)       | 🟡         |
+| a new-arch only lib                                                                                                         | [react-native-gradient](https://github.com/FyndX/react-native-gradient)                    | ❌ (as expected)      | ✅ (ios) ❌ (android - unexpected)       | 🟡         |
 | a new-arch only lib with [backward compatibility](https://reactnative.dev/docs/the-new-architecture/backward-compatibility) | need to find one                                                                           | 🤷‍♂️                    | 🤷‍♂️       | 🤷‍♂️         |
 
 ### Specific libs comments or notes
@@ -43,7 +43,8 @@ Then I'll move to the meat of this experiment: the idea is that I'll add all the
 
 - ✅ add "status code" to show which state the thing is in (old/new arch, concurrent on/off) (hats off to [@tido64](https://github.com/tido64) for [this](https://github.com/microsoft/react-native-test-app/blob/trunk/example/App.js#L159-L169))
 - ✅ do basic tests
-- 🟡 add libraries and sample code one by one, in old arch
-- 🟡 do the tests (new arch on first)
-- 🟡 get the app in shape for turning on in new arch proper
+- ✅ add libraries and sample code one by one, in old arch
+- ✅ do the tests (new arch on first)
+- ✅ get the app in shape for turning on in new arch proper
+- 🟡 test the TM only mode in Android
 - 🟡 summarize the whole thing into some learnings
