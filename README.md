@@ -30,13 +30,14 @@ Then I'll move to the meat of this experiment: the idea is that I'll add all the
 | a non-visual lib with "official support" for new arch                                                                       | couldn't find any                                                                          | 🤷‍♂️                    | 🤷‍♂️       | 🤷‍♂️         |
 | a non-visual lib without "official support" for the new arch                                                                | [react-native-get-random-values](https://github.com/LinusU/react-native-get-random-values) | ✅                    | ✅       | 🟡         |
 | a js-only lib                                                                                                               | [react-native-bouncy-checkbox](https://github.com/WrathChaos/react-native-bouncy-checkbox) | ✅                    | ✅       | 🟡         |
-| a new-arch only lib                                                                                                         | [react-native-gradient](https://github.com/FyndX/react-native-gradient)                    | ❌ (as expected)      | 🟡       | 🟡         |
+| a new-arch only lib                                                                                                         | [react-native-gradient](https://github.com/FyndX/react-native-gradient)                    | ❌ (as expected)      | ✅ (ios) ❌ (unexpected)       | 🟡         |
 | a new-arch only lib with [backward compatibility](https://reactnative.dev/docs/the-new-architecture/backward-compatibility) | need to find one                                                                           | 🤷‍♂️                    | 🤷‍♂️       | 🤷‍♂️         |
 
 ### Specific libs comments or notes
 
 - the fact that `FyndX/react-native-gradient` fails on `pod install` when on old arch is expected, it errors because the pod itself depends on `React-RCTFabric` which is new arch specific
-- non-Fabric compatible libraries have this nice fallback of a red box (see screenshot v1 in /docs); it all build fine but simply it won't get loaded
+- non-Fabric compatible libraries have this nice fallback of a red box (see screenshot v1 in `/docs`); it all build fine but simply it won't get loaded
+- I think `FyndX/react-native-gradient` erroring in Android is probably because of the lib itself, not my doing. I already added [patch-package](https://github.com/ds300/patch-package) to handle the Folly bump (see the patch in `/patches`)
 
 ## TODO
 
