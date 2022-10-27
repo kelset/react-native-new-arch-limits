@@ -22,6 +22,7 @@ import SliderComponent from './SliderComponent';
 import WebViewComponent from './WebViewComponent';
 import CryptoNumberComponent from './CryptoNumberComponent';
 import BouncyCheckboxComponent from './BouncyCheckboxComponent';
+import NewArchGradientComponent from './NewArchGradientComponent';
 
 function getReactNativeVersion() {
   const version = `${coreVersion.major}.${coreVersion.minor}.${coreVersion.patch}`;
@@ -81,6 +82,9 @@ const App: () => Node = ({concurrentRoot}) => {
         <Text style={styles.textTitle}>BouncyCheckbox Component</Text>
         <Text style={styles.textDescription}>a js-only lib</Text>
         <BouncyCheckboxComponent />
+        <Text style={styles.textTitle}>NewArchGradient Component</Text>
+        <Text style={styles.textDescription}>a new-arch only lib</Text>
+        <NewArchGradientComponent />
       </ScrollView>
     </SafeAreaView>
   );

@@ -18,7 +18,8 @@
     "react-native": "0.70.4",
     "react-native-bouncy-checkbox": "^3.0.5",
     "react-native-get-random-values": "^1.8.0",
-    "react-native-webview": "^11.23.1"
+    "react-native-webview": "^11.23.1",
+    "rnx-gradient": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

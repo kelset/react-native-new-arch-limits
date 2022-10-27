@@ -5894,6 +5894,11 @@ rimraf@~2.6.2:
   dependencies:
     glob "^7.1.3"
 
+rnx-gradient@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/rnx-gradient/-/rnx-gradient-0.1.0.tgz#39386a7c86331b023486630c927ef7769263070f"
+  integrity sha512-MgIzgSpdqLMzdjCF11awasVz+Osm8qgJMDICYb7O2HDc2BIZsteSlH6u+oKN77+D6Fp5R5jGE9i++lXgJZNfew==
+
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
