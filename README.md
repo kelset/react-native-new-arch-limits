@@ -25,12 +25,12 @@ Then I'll move to the meat of this experiment: the idea is that I'll add all the
 
 | What                                                                                                                        | which lib                                                                                  | old arch _(baseline)_ | new arch | only TM on |
 | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------- | -------- | ---------- |
-| a visual lib with "official support" for new arch                                                                           | [react-native-slider](https://github.com/callstack/react-native-slider)                    | ✅                    | ✅       | 🟡         |
-| a visual lib without "official support" for new arch                                                                        | [react-native-webview](https://github.com/react-native-webview/react-native-webview)       | ✅                    | ❌ (as expected)       | 🟡         |
+| a visual lib with "official support" for new arch                                                                           | [react-native-slider](https://github.com/callstack/react-native-slider)                    | ✅                    | ✅       | ✅         |
+| a visual lib without "official support" for new arch                                                                        | [react-native-webview](https://github.com/react-native-webview/react-native-webview)       | ✅                    | ❌ (as expected)       | ✅         |
 | a non-visual lib with "official support" for new arch                                                                       | couldn't find any                                                                          | 🤷‍♂️                    | 🤷‍♂️       | 🤷‍♂️         |
-| a non-visual lib without "official support" for the new arch                                                                | [react-native-get-random-values](https://github.com/LinusU/react-native-get-random-values) | ✅                    | ✅       | 🟡         |
-| a js-only lib                                                                                                               | [react-native-bouncy-checkbox](https://github.com/WrathChaos/react-native-bouncy-checkbox) | ✅                    | ✅       | 🟡         |
-| a new-arch only lib                                                                                                         | [react-native-gradient](https://github.com/FyndX/react-native-gradient)                    | ❌ (as expected)      | ✅ (ios) ❌ (android - unexpected)       | 🟡         |
+| a non-visual lib without "official support" for the new arch                                                                | [react-native-get-random-values](https://github.com/LinusU/react-native-get-random-values) | ✅                    | ✅       | ✅         |
+| a js-only lib                                                                                                               | [react-native-bouncy-checkbox](https://github.com/WrathChaos/react-native-bouncy-checkbox) | ✅                    | ✅       | ✅         |
+| a new-arch only lib                                                                                                         | [react-native-gradient](https://github.com/FyndX/react-native-gradient)                    | ❌ (as expected)      | ✅ (ios) ❌ (android - unexpected)       | ❌ (as expected)         |
 | a new-arch only lib with [backward compatibility](https://reactnative.dev/docs/the-new-architecture/backward-compatibility) | need to find one                                                                           | 🤷‍♂️                    | 🤷‍♂️       | 🤷‍♂️         |
 
 ### Specific libs comments or notes
@@ -46,5 +46,5 @@ Then I'll move to the meat of this experiment: the idea is that I'll add all the
 - ✅ add libraries and sample code one by one, in old arch
 - ✅ do the tests (new arch on first)
 - ✅ get the app in shape for turning on in new arch proper
-- 🟡 test the TM only mode in Android
+- ✅ test the TM only mode in Android
 - 🟡 summarize the whole thing into some learnings
